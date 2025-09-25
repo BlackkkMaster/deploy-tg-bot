@@ -41,7 +41,7 @@ jobs:
         username: ${{ secrets.SSH_USER }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         script: |
-          cd ~/smartphone_vivo
+          cd ~/deploy-tg-bot
           docker compose down
           git reset --hard origin/main  
           git pull origin main
