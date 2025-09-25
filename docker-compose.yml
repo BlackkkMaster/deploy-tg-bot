@@ -9,7 +9,7 @@ services:
     restart: always
     volumes:
       - ./for_docker/data:/bot/data
-      - ./root/executor_docker_host/pipe:/bot/executor_docker_host/pipe
+      - ./root/executor_docker_host:/bot/executor_docker_host
     profiles:
       - prod
       - dev
