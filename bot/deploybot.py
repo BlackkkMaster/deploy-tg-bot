@@ -21,8 +21,8 @@ async def handle_deploy(message: telebot.types.Message):
 
     if user_id in ADMIN_IDS:
         try:
-            command = "echo /root/docker_restart.sh > executor_docker_host"
-            os.system(command)
+            comd = "echo /root/docker_restart.sh > executor_docker_host/pipe"
+            os.system(comd)
             response_text = "✅ *Успех*"
         except Exception:
             response_text = "❌ *Ошибка при выполнении команды*"
