@@ -1,0 +1,16 @@
+name: "deploybot"
+
+services:
+  bot_python:
+    build: .
+    container_name: deploybot-py
+    env_file:
+      - ./.env
+    restart: always
+    volumes:
+      - ./for_docker/data:/bot/data
+      - ./for_docker/pipe:/bot/executor_docker_host
+    profiles:
+      - prod
+      - dev
+
